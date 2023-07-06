@@ -1,0 +1,37 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  /* padding and border are included in the width and height */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  /* View port of the header, controll how much to show on the screen */
+  height: 95vh;
+  /* Adding 2 images, linear-gradient on top of the actual image for additional effect */
+  background-image: linear-gradient(to right bottom, #7ed56fbe, #28b485be),
+    url(../img/hero.jpg);
+  /* cover = to fit inside the elements view port */
+  background-size: cover;
+  background-position: top;
+  /* Crop header */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* (x y) */
+}
