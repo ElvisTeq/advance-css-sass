@@ -3,3 +3,17 @@
 --------------------------------- \* {}
 
 - Universal Selector (Apply CSS)
+
+8.
+
+--------------------------------- @keyframes [NAME]
+
+- Create animation
+
+--------------------------------- animation-name: [NAME]
+
+- Add animation created with @keyframes
+
+--------------------------------- backface-visibility: hidden;
+
+- Makes background hidden (fixes animation glitch after animation ends)
