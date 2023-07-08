@@ -7,20 +7,30 @@ Dark green: #28b485
 
 */
 
-* {
+/* Make sure to include pseudo elements also inherits */
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  /* padding and border are included in the width and height */
-  box-sizing: border-box;
+  /* all elements will inherit from body */
+  box-sizing: inherit;
+}
+
+html {
+  /* assigning root font-size (rem) so it escalates with all platforms default root px */
+  /* We want 10px, so, 16/62.5 = 10 */
+  font-size: 62.5%;
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
+  /* all elements will inherit here, because = box-sizing: inherit in [*] */
+  box-sizing: border-box;
 }
 
 .header {
@@ -41,12 +51,12 @@ body {
 .logo-box {
   /* absolute position to parent element */
   position: absolute;
-  top: -30px;
-  left: -30px;
+  top: -1rem;
+  left: -1rem;
 }
 
 .logo {
-  height: 180px;
+  height: 15rem;
 }
 
 .text-box {
@@ -64,14 +74,14 @@ body {
 
   /* Fix animation glitch (hides backgroung) */
   backface-visibility: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
   display: block; /* makes it take all line */
   font-size: 60px;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
   /* Adding animation created with @keyframes */
   animation-name: moveInLeft;
@@ -81,9 +91,9 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.74rem;
 
   /* Can be shortened all in one */
   animation: moveInRight 1s ease-out;
@@ -92,11 +102,11 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -108,11 +118,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -124,7 +134,7 @@ body {
 @keyframes moveInButton {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(10rem);
   }
 
   100% {
@@ -139,10 +149,10 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   /* button size */
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   /* Will not overlap to other lines (elements) */
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   /* Apply animation options to all (children) */
   transition: all 0.2s;
   /* For child elements to position from here */
@@ -152,12 +162,12 @@ body {
 .btn:hover {
   transform: translateY(-3px);
   /* UP DOWN BLUR COLOR */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -169,10 +179,10 @@ body {
 .btn::after {
   content: "";
   display: inline-block;
-  /* This is treated like a child element */
+  /* This is treated like a child element of the original */
   height: 100%;
   width: 100%;
-  border-radius: 100%;
+  border-radius: 10rem;
   /* Will be positioned based on the closest parent element with "relative" position */
   position: absolute;
   top: 0;
