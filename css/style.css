@@ -54,7 +54,8 @@ body {
   top: 50%;
   left: 50%;
   /* Change position based on current position */
-  transform: translate(-45%, -80%);
+  transform: translate(-50%, -80%);
+  text-align: center;
 }
 
 .heading-primary {
@@ -63,6 +64,7 @@ body {
 
   /* Fix animation glitch (hides backgroung) */
   backface-visibility: hidden;
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -117,4 +119,81 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Changes to button default/visited */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  /* button size */
+  padding: 15px 40px;
+  /* Will not overlap to other lines (elements) */
+  display: inline-block;
+  border-radius: 100px;
+  /* Apply animation options to all (children) */
+  transition: all 0.2s;
+  /* For child elements to position from here */
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  /* UP DOWN BLUR COLOR */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+/* :: creates a pseudo-element that is the last child of the selected element */
+.btn::after {
+  content: "";
+  display: inline-block;
+  /* This is treated like a child element */
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  /* Will be positioned based on the closest parent element with "relative" position */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Positioning element to be behind */
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  /* keyframe, animationTime, effect, delay */
+  animation: moveInButton 0.5s ease-out 0.75s;
+  /* animation starts backwards */
+  animation-fill-mode: backwards;
 }
