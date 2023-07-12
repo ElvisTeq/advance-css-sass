@@ -1,3 +1,10 @@
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-grey-dark: #777;
+$color-white: #fff;
+
 /* Make sure to include pseudo elements also inherits */
 *,
 *::after,
@@ -5,44 +12,54 @@
   margin: 0;
   padding: 0;
   /* all elements will inherit from body */
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
   /* assigning root font-size (rem) so it escalates with all platforms default root px */
   /* We want 10px, so, 16/62.5 = 10 */
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
   /* all elements will inherit here, because = box-sizing: inherit in [*] */
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .header {
   /* View port of the header, controll how much to show on the screen */
   height: 95vh;
   /* Adding 2 images, linear-gradient on top of the actual image for additional effect */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
   /* cover = to fit inside the elements view port */
   background-size: cover;
   background-position: top;
   /* position on child elements will be based on here */
   position: relative;
   /* Crop header */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /* (x y) */ }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* (x y) */
+}
 
 .header__logo-box {
   /* absolute position to parent element */
   position: absolute;
   top: -1rem;
-  left: -1rem; }
+  left: -1rem;
+}
 
 .header__logo {
-  height: 15rem; }
+  height: 15rem;
+}
 
 .header__text-box {
   position: absolute;
@@ -50,61 +67,83 @@ body {
   left: 50%;
   /* Change position based on current position */
   transform: translate(-50%, -80%);
-  text-align: center; }
+  text-align: center;
+}
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
+
   /* Fix animation glitch (hides backgroung) */
   backface-visibility: hidden;
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem;
+}
 
 .heading-primary--main {
-  display: block;
-  /* makes it take all line */
+  display: block; /* makes it take all line */
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 3.5rem;
+
   /* Adding animation created with @keyframes */
   animation-name: moveInLeft;
   animation-duration: 1s;
-  animation-timing-function: ease-out; }
+  animation-timing-function: ease-out;
+}
 
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.74rem;
+
   /* Can be shortened all in one */
-  animation: moveInRight 1s ease-out; }
+  animation: moveInRight 1s ease-out;
+}
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
+    transform: translateX(-10rem);
+  }
+
   80% {
-    transform: translateX(1rem); }
+    transform: translateX(1rem);
+  }
+
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+  }
+
   80% {
-    transform: translateX(-1rem); }
+    transform: translateX(-1rem);
+  }
+
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 @keyframes moveInButton {
   0% {
     opacity: 0;
-    transform: translateY(10rem); }
+    transform: translateY(10rem);
+  }
+
   100% {
     opacity: 1;
-    transform: translateY(0); } }
+    transform: translateY(0);
+  }
+}
 
 /* Changes to button default/visited */
 .btn:link,
@@ -119,20 +158,24 @@ body {
   /* Apply animation options to all (children) */
   transition: all 0.2s;
   /* For child elements to position from here */
-  position: relative; }
+  position: relative;
+}
 
 .btn:hover {
   transform: translateY(-3px);
   /* UP DOWN BLUR COLOR */
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
 
 .btn--white {
-  background-color: #fff;
-  color: #777; }
+  background-color: $color-white;
+  color: $color-grey-dark;
+}
 
 /* :: creates a pseudo-element that is the last child of the selected element */
 .btn::after {
@@ -148,17 +191,21 @@ body {
   left: 0;
   /* Positioning element to be behind */
   z-index: -1;
-  transition: all 0.4s; }
+  transition: all 0.4s;
+}
 
 .btn--white::after {
-  background-color: #fff; }
+  background-color: $color-white;
+}
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+  opacity: 0;
+}
 
 .btn--animated {
   /* keyframe, animationTime, effect, delay */
   animation: moveInButton 0.5s ease-out 0.75s;
   /* animation starts backwards */
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+}

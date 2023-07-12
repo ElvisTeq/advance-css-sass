@@ -77,3 +77,17 @@
 - Commands to create file
 
 ---------------------------------- cp(copy) / mv(move) / del(delete) / open
+
+27.
+
+---------------------------------- npm i node-sass --save-dev
+
+- Instaslling SASS
+- --save-dev to mark up as a deleveloping tool
+
+28.
+
+---------------------------------- "compile:sass": "[name] [fileLocation] [compileDestination] -w"
+
+- "script" from "package.json" to compile SASS
+- -w = watch, auto compile after saving
