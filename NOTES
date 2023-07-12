@@ -65,3 +65,15 @@
 ---------------------------------- @extend %[placeholder-name];
 
 - To add placeholder to elements
+
+26.
+
+---------------------------------- mkdir [directoryName]
+
+- Commands to create directory
+
+---------------------------------- edit [fileName]
+
+- Commands to create file
+
+---------------------------------- cp(copy) / mv(move) / del(delete) / open
