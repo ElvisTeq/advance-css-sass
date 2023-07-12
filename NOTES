@@ -30,3 +30,38 @@
 --------------------------------- BEM
 
 - technique for naming our classes
+
+24.
+
+---------------------------------- $[varName]: ;
+
+- To crease SASS var
+
+---------------------------------- @mixin [varName] {}
+
+- Create SASS mixin
+
+---------------------------------- @mixin [varName]($[varName]) {}
+
+- Create SASS mixin with argument
+
+---------------------------------- @include [mixinName];
+
+- Adding mixin to class element
+
+---------------------------------- darken/lighten(color,%)
+
+- function for color effect
+
+---------------------------------- @function [funcName]($a, $b) {$return;}
+
+- Create function in SASS
+
+---------------------------------- %[placeholder-name] {}
+
+- Similar to mixin (saves options)
+- But makes the code run from here (no copies) when compiled
+
+---------------------------------- @extend %[placeholder-name];
+
+- To add placeholder to elements
