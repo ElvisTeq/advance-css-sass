@@ -62,7 +62,7 @@ body {
 .heading-primary--main {
   display: block;
   /* makes it take all line */
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
   /* Adding animation created with @keyframes */
@@ -111,6 +111,7 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
+  font-size: 1.5rem;
   /* button size */
   padding: 1.5rem 4rem;
   /* Will not overlap to other lines (elements) */

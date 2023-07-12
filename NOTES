@@ -91,3 +91,10 @@
 
 - "script" from "package.json" to compile SASS
 - -w = watch, auto compile after saving
+
+29.
+
+---------------------------------- npm i live-server -g
+
+- automatically reloads page when saved
+- live-server (on command console to run)
