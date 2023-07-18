@@ -98,3 +98,14 @@
 
 - automatically reloads page when saved
 - live-server (on command console to run)
+
+31.
+
+---------------------------------- @import ''
+
+- Import SASS file
+
+---------------------------------- 7-1 CSS Architectire with SASS
+
+- see [FOLDER/FILES] - abstracts | base | components | layout | pages
+- main 7-1 files from [abstracts|base]
