@@ -109,3 +109,21 @@
 
 - see [FOLDER/FILES] - abstracts | base | components | layout | pages
 - main 7-1 files from [abstracts|base]
+
+34.
+
+---------------------------------- $not(:last-child) {}
+
+- Pseudo class for = everything but the last child
+
+---------------------------------- calc()
+
+- CSS built in function
+- To add SASS vars = #{&SASS-Variable}
+
+---------------------------------- [attribute | class^=""]
+
+- CSS Attribute Selector
+- ["^"] To select classes that "starts"
+- ["*"] To select classes that "contains"
+- ["$"] To select classes that "ends"

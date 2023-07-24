@@ -36,7 +36,7 @@
   box-sizing: inherit; }
 
 html {
-  /* assigning root font-size (rem) so it escalates with all platforms default root px */
+  /* Defining "1rem" so it escalates with all platforms default root px */
   /* We want 10px, so, 16/62.5 = 10 */
   font-size: 62.5%; }
 
@@ -48,35 +48,6 @@ body {
   padding: 3rem;
   /* all elements will inherit here, because = box-sizing: inherit in [*] */
   box-sizing: border-box; }
-
-.header {
-  /* View port of the header, controll how much to show on the screen */
-  height: 95vh;
-  /* Adding 2 images, linear-gradient on top of the actual image for additional effect */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  /* cover = to fit inside the elements view port */
-  background-size: cover;
-  background-position: top;
-  /* position on child elements will be based on here */
-  position: relative;
-  /* Crop header */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /* (x y) */
-  /* Nested Header Elements */ }
-  .header__logo-box {
-    /* absolute position to parent element */
-    position: absolute;
-    top: -1rem;
-    left: -1rem; }
-  .header__logo {
-    height: 15rem; }
-  .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* Change position based on current position */
-    transform: translate(-50%, -80%);
-    text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -152,3 +123,60 @@ body {
     animation: moveInButton 0.5s ease-out 0.75s;
     /* animation starts backwards */
     animation-fill-mode: backwards; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  /* View port of the header, controll how much to show on the screen */
+  height: 95vh;
+  /* Adding 2 images, linear-gradient on top of the actual image for additional effect */
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  /* cover = to fit inside the elements view port */
+  background-size: cover;
+  background-position: top;
+  /* position on child elements will be based on here */
+  position: relative;
+  /* Crop header */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* (x y) */
+  /* Nested Header Elements */ }
+  .header__logo-box {
+    /* absolute position to parent element */
+    position: absolute;
+    top: -1rem;
+    left: -1rem; }
+  .header__logo {
+    height: 15rem; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Change position based on current position */
+    transform: translate(-50%, -80%);
+    text-align: center; }
