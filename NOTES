@@ -127,3 +127,13 @@
 - ["^"] To select classes that "starts"
 - ["*"] To select classes that "contains"
 - ["$"] To select classes that "ends"
+
+35.
+
+---------------------------------- -webkit-background-clip: text;
+
+- Makes background to apply to the text
+
+---------------------------------- Utility Classes
+
+- We created <div class="u-center-text"> to reuse whenever we need to center an element in the DOM
