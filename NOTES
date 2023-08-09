@@ -137,3 +137,7 @@
 ---------------------------------- Utility Classes
 
 - We created <div class="u-center-text"> to reuse whenever we need to center an element in the DOM
+
+37.
+
+- implemented "z-index, outline, outline-offset" on images
