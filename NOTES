@@ -147,3 +147,10 @@
 ---------------------------------- & > \* {}
 
 - & all child elements
+
+39.
+
+- ---------------------------------- transform: rotateY/X(deg);
+- Rotating animation on mouse hover
+  ---------------------------------- perpective:
+- Adds 3D effect in rotate animation

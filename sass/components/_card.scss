@@ -1,0 +1,36 @@
+.card {
+  // Gives 3D to rotate animation perspective "has to be added on the parent ele"
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    color: #fff;
+    font-size: 2rem;
+    height: 50rem;
+    transition: all 0.8s ease;
+    // Positioning to the same place "Parent loses height value (we need to re-specify)"
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateX(-180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateX(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateX(0);
+  }
+}
