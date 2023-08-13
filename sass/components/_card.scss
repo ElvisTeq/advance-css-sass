@@ -17,6 +17,8 @@
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
+    // Hide oversized elements (images border radius)
+    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &--front {
@@ -37,10 +39,31 @@
   }
 
   &:hover &__side--front {
-    transform: rotateX(-180deg);
+    transform: rotateX(180deg);
   }
 
   &:hover &__side--back {
     transform: rotateX(0);
+  }
+
+  // Card-Front
+  &__picture {
+    background-size: cover;
+    height: 28rem;
+    // Background Modes
+    background-blend-mode: lighten;
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary,
+          $color-primary-dark
+        ),
+        url(../img/ramen.png);
+    }
+
+    &--2 {
+      background-image: url(../img/onigiri.png);
+    }
   }
 }

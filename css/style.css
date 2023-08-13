@@ -241,6 +241,7 @@ body {
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
+    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
       background-color: #fff; }
@@ -249,9 +250,17 @@ body {
       .card__side--back-1 {
         background-image: linear-gradient(to bottom, #ffd27d, #ffb62e); }
   .card:hover .card__side--front {
-    transform: rotateX(-180deg); }
+    transform: rotateX(180deg); }
   .card:hover .card__side--back {
     transform: rotateX(0); }
+  .card__picture {
+    background-size: cover;
+    height: 28rem;
+    background-blend-mode: lighten; }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffd27d, #724705), url(../img/ramen.png); }
+    .card__picture--2 {
+      background-image: url(../img/onigiri.png); }
 
 .row {
   max-width: 114rem;
@@ -290,6 +299,7 @@ body {
   /* position on child elements will be based on here */
   position: relative;
   /* Crop header */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* (x y) */
   /* Nested Header Elements */ }
