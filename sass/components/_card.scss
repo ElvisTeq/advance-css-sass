@@ -6,8 +6,6 @@
   height: 50rem;
 
   &__side {
-    color: #fff;
-    font-size: 2rem;
     height: 50rem;
     transition: all 0.8s ease;
     // Positioning to the same place "Parent loses height value (we need to re-specify)"
@@ -19,7 +17,7 @@
     border-radius: 3px;
     // Hide oversized elements (images border radius)
     overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    box-shadow: 0 1.5rem 2.5rem rgba($color-black, 0.9);
 
     &--front {
       background-color: $color-white;
@@ -51,19 +49,53 @@
     background-size: cover;
     height: 28rem;
     // Background Modes
-    background-blend-mode: lighten;
+    // background-blend-mode: lighten;
 
     &--1 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-primary,
-          $color-primary-dark
-        ),
-        url(../img/ramen.png);
+      background-image: url(../img/ramen.png);
     }
 
     &--2 {
       background-image: url(../img/onigiri.png);
     }
+  }
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color-primary-dark;
+    position: absolute;
+    top: 22.5rem;
+    left: 1rem;
+    width: 50%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    // Fixes left/right padding when line breaks into another lane
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.85),
+        rgba($color-primary-light, 0.85)
+      );
+    }
+  }
+
+  &__difficulty {
+    font-size: 1.8rem;
+    left: 65%;
+    position: absolute;
+    transform: translateY(1rem);
+  }
+
+  &__details {
+    padding: 2rem;
+    font-size: 1.8rem;
+    bottom: 3rem;
+    position: absolute;
   }
 }

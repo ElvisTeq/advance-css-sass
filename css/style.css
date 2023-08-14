@@ -41,6 +41,9 @@ html {
   font-size: 62.5%; }
 
 body {
+  background-color: #222222; }
+
+body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
@@ -50,7 +53,7 @@ body {
   box-sizing: border-box; }
 
 .heading-primary {
-  color: #fff;
+  color: #252424;
   text-transform: uppercase;
   /* Fix animation glitch (hides backgroung) */
   backface-visibility: hidden;
@@ -136,10 +139,10 @@ body {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
   .btn--white {
-    background-color: #fff;
+    background-color: #252424;
     color: #777; }
     .btn--white::after {
-      background-color: #fff; }
+      background-color: #252424; }
   .btn::after {
     content: "";
     display: inline-block;
@@ -171,7 +174,7 @@ body {
 
 .btn-text:hover {
   background-color: #ffd27d;
-  color: #fff;
+  color: #252424;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
 
@@ -208,7 +211,7 @@ body {
 
 .feature-box {
   min-height: 30rem;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(37, 36, 36, 0.9);
   font-size: 1.5rem;
   padding: 2.5rem;
   text-align: center;
@@ -231,8 +234,6 @@ body {
   position: relative;
   height: 50rem; }
   .card__side {
-    color: #fff;
-    font-size: 2rem;
     height: 50rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -242,9 +243,9 @@ body {
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.9); }
     .card__side--front {
-      background-color: #fff; }
+      background-color: #252424; }
     .card__side--back {
       transform: rotateX(-180deg); }
       .card__side--back-1 {
@@ -255,12 +256,36 @@ body {
     transform: rotateX(0); }
   .card__picture {
     background-size: cover;
-    height: 28rem;
-    background-blend-mode: lighten; }
+    height: 28rem; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #ffd27d, #724705), url(../img/ramen.png); }
+      background-image: url(../img/ramen.png); }
     .card__picture--2 {
       background-image: url(../img/onigiri.png); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #724705;
+    position: absolute;
+    top: 22.5rem;
+    left: 1rem;
+    width: 50%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 210, 125, 0.85), rgba(255, 182, 46, 0.85)); }
+  .card__difficulty {
+    font-size: 1.8rem;
+    left: 65%;
+    position: absolute;
+    transform: translateY(1rem); }
+  .card__details {
+    padding: 2rem;
+    font-size: 1.8rem;
+    bottom: 3rem;
+    position: absolute; }
 
 .row {
   max-width: 114rem;
@@ -319,7 +344,7 @@ body {
     text-align: center; }
 
 .section-about {
-  background-color: #f7f7f7;
+  background-color: #202020;
   padding: 25rem 0;
   margin-top: -20vh; }
 
@@ -333,6 +358,6 @@ body {
     transform: skewY(7deg); }
 
 .section-dishes {
-  background-color: #f7f7f7;
+  background-color: #202020;
   padding: 25rem 0 50rem 0;
   margin-top: -12rem; }
