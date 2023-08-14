@@ -9,7 +9,7 @@ body {
 }
 
 .heading-primary {
-  color: $color-white;
+  color: $color-grey-light-1;
   text-transform: uppercase;
 
   /* Fix animation glitch (hides backgroung) */
@@ -19,7 +19,7 @@ body {
   &--main {
     display: block; /* makes it take all line */
     font-size: 6rem;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 3.5rem;
 
     /* Adding animation created with @keyframes */
@@ -31,7 +31,7 @@ body {
   &--sub {
     display: block;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 1.74rem;
 
     /* Can be shortened all in one */
@@ -59,7 +59,7 @@ body {
 
   &:hover {
     transform: skewY(1deg) skewX(2deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.9);
   }
 }
 
