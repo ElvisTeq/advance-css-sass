@@ -249,7 +249,7 @@ body {
     .card__side--back {
       transform: rotateX(-180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to bottom, #ffd27d, #ffb62e); }
+        background-image: linear-gradient(to bottom, #202020, #252424); }
   .card:hover .card__side--front {
     transform: rotateX(180deg); }
   .card:hover .card__side--back {
@@ -286,6 +286,19 @@ body {
     font-size: 1.8rem;
     bottom: 3rem;
     position: absolute; }
+  .card__cta {
+    position: absolute;
+    width: 90%; }
+  .card__ingredients {
+    color: #252424;
+    margin-bottom: 8rem; }
+    .card__ingredients-header {
+      transform: translate(4rem, 3rem);
+      font-size: 3rem;
+      text-transform: uppercase; }
+    .card__ingredients-list {
+      transform: translate(10rem, 6rem);
+      font-size: 1.8rem; }
 
 .row {
   max-width: 114rem;
