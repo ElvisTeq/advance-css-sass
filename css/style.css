@@ -254,12 +254,12 @@ body {
     transform: rotateX(180deg); }
   .card:hover .card__side--back {
     transform: rotateX(0); }
-  .card__picture {
+  .card__picture-front {
     background-size: cover;
     height: 28rem; }
-    .card__picture--1 {
+    .card__picture-front--1 {
       background-image: url(../img/ramen.png); }
-    .card__picture--2 {
+    .card__picture-front--2 {
       background-image: url(../img/onigiri.png); }
   .card__heading {
     font-size: 2.8rem;
@@ -276,11 +276,16 @@ body {
     box-decoration-break: clone; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 210, 125, 0.85), rgba(255, 182, 46, 0.85)); }
-  .card__difficulty {
+  .card__stats {
     font-size: 1.8rem;
-    left: 65%;
     position: absolute;
-    transform: translateY(1rem); }
+    width: auto;
+    transform: translateY(1rem);
+    left: 32%;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem; }
+    .card__stats--difficulty {
+      margin-right: 6rem; }
   .card__details {
     padding: 2rem;
     font-size: 1.8rem;
@@ -288,17 +293,20 @@ body {
     position: absolute; }
   .card__cta {
     position: absolute;
-    width: 90%; }
+    width: 100%; }
+  .card__picture-back {
+    background-size: cover;
+    height: 28rem; }
+    .card__picture-back--1 {
+      background-image: url(../../img/real-ramen.jpg); }
   .card__ingredients {
-    color: #252424;
-    margin-bottom: 8rem; }
-    .card__ingredients-header {
-      transform: translate(4rem, 3rem);
-      font-size: 3rem;
-      text-transform: uppercase; }
-    .card__ingredients-list {
-      transform: translate(10rem, 6rem);
-      font-size: 1.8rem; }
+    margin: 2rem;
+    font-size: 1.8rem; }
+    .card__ingredients-details {
+      font-size: 1.6rem;
+      margin-left: 1rem; }
+    .card__ingredients-servings {
+      margin-top: 1.5rem; }
 
 .row {
   max-width: 114rem;
