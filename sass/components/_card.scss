@@ -98,9 +98,6 @@
     &--difficulty {
       margin-right: 6rem;
     }
-
-    &--time {
-    }
   }
 
   &__details {
@@ -132,16 +129,17 @@
     margin: 2rem;
     font-size: 1.8rem;
 
+    & > * {
+      margin: 1.2rem;
+    }
+
     &-header {
     }
 
-    &-details {
-      font-size: 1.6rem;
-      margin-left: 1rem;
+    &-time {
     }
 
     &-servings {
-      margin-top: 1.5rem;
     }
   }
 }

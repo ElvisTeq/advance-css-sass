@@ -302,11 +302,8 @@ body {
   .card__ingredients {
     margin: 2rem;
     font-size: 1.8rem; }
-    .card__ingredients-details {
-      font-size: 1.6rem;
-      margin-left: 1rem; }
-    .card__ingredients-servings {
-      margin-top: 1.5rem; }
+    .card__ingredients > * {
+      margin: 1.2rem; }
 
 .row {
   max-width: 114rem;
