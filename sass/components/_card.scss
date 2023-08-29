@@ -1,7 +1,7 @@
 .card {
   // Gives 3D to rotate animation perspective "has to be added on the parent ele"
-  perspective: 150rem;
-  -moz-perspective: 150rem;
+  perspective: 180rem;
+  -moz-perspective: 180rem;
   position: relative;
   height: 50rem;
 
@@ -20,28 +20,28 @@
     box-shadow: 0 1.5rem 2.5rem rgba($color-black, 0.9);
 
     &--front {
-      background-color: $color-white;
+      background-color: $color-grey-soft;
     }
 
     &--back {
-      transform: rotateX(-180deg);
+      transform: rotateY(180deg);
 
       &-1 {
         background-image: linear-gradient(
           to bottom,
           $color-grey-light-1,
-          $color-white
+          $color-grey-soft
         );
       }
     }
   }
 
   &:hover &__side--front {
-    transform: rotateX(180deg);
+    transform: rotateY(-180deg);
   }
 
   &:hover &__side--back {
-    transform: rotateX(0);
+    transform: rotateY(0);
   }
 
   // Card Front Side
@@ -56,7 +56,7 @@
     }
 
     &--2 {
-      background-image: url(../img/onigiri.png);
+      background-image: url(../../img/onigiri-2.jpg);
     }
   }
 
@@ -66,8 +66,8 @@
     text-transform: uppercase;
     color: $color-primary-dark;
     position: absolute;
-    top: 22.5rem;
-    left: 1rem;
+    top: 23rem;
+    left: 2rem;
     width: 50%;
   }
 
@@ -80,30 +80,32 @@
     &--1 {
       background-image: linear-gradient(
         to right bottom,
-        rgba($color-primary, 0.85),
-        rgba($color-primary-light, 0.85)
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary, 0.85)
       );
     }
   }
 
   &__stats {
-    font-size: 1.8rem;
+    font-size: $default-font-size-medium;
     position: absolute;
     width: auto;
-    transform: translateY(1rem);
-    left: 32%;
+    transform: translateY(2rem);
+    left: 55%;
     text-decoration: underline;
+    text-decoration-color: $color-primary;
+    text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.5rem;
 
     &--difficulty {
-      margin-right: 6rem;
     }
   }
 
   &__details {
     padding: 2rem;
-    font-size: 1.8rem;
-    bottom: 3rem;
+    font-size: $default-font-size-medium;
+    align-items: end;
+    margin-top: 4.5rem;
     position: absolute;
   }
 
@@ -122,15 +124,22 @@
     }
 
     &--2 {
+      background-image: url(../../img/onigiri-real.jpg);
     }
   }
 
   &__ingredients {
-    margin: 2rem;
-    font-size: 1.8rem;
+    margin: 3rem 0 0 2.5rem;
+    font-size: $default-font-size-medium;
 
     & > * {
       margin: 1.2rem;
+    }
+
+    &-btn {
+      display: block;
+      text-align: end;
+      width: 100%;
     }
 
     &-header {

@@ -9,7 +9,7 @@ body {
 }
 
 .heading-primary {
-  color: $color-grey-light-1;
+  color: $color-white;
   text-transform: uppercase;
 
   /* Fix animation glitch (hides backgroung) */
@@ -64,13 +64,13 @@ body {
 }
 
 .heading-tertiary {
-  font-size: $default-font-size;
+  font-size: $default-font-size-medium;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .paragraph {
-  font-size: $default-font-size;
+  font-size: $default-font-size-small;
 
   &:not(:last-child) {
     margin-bottom: 3rem;

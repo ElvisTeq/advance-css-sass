@@ -4,7 +4,7 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    font-size: $default-font-size;
+    font-size: $default-font-size-small;
     /* button size */
     padding: 1.5rem 4rem;
     /* Will not overlap to other lines (elements) */
@@ -41,6 +41,15 @@
     }
   }
 
+  &--yellow {
+    background-color: $color-primary-light;
+    color: $color-grey-soft;
+
+    &::after {
+      background-color: $color-primary-light;
+    }
+  }
+
   /* :: creates a pseudo-element that is the last child of the selected element */
   &::after {
     content: "";
@@ -69,17 +78,17 @@
 .btn-text {
   &:link,
   &:visited {
-    font-size: 1.6rem;
+    font-size: $default-font-size-small;
     color: $color-primary;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 1px solid $color-primary;
+    border-bottom: 1px solid $color-primary-light;
     padding: 3px;
     transition: all 0.2s;
   }
 
   &:hover {
-    background-color: $color-primary;
+    background-color: $color-primary-dark;
     color: $color-white;
     box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
     transform: translateY(-2px);
