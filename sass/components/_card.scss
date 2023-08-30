@@ -104,6 +104,15 @@
     position: absolute;
   }
 
+  &__more {
+    position: absolute;
+    margin-top: 18rem;
+    font-size: $default-font-size-small;
+    text-align: end;
+    width: 98%;
+    color: $color-primary-light;
+  }
+
   ///////////////////////////// Card Back Side ////////////////////////////
   &__cta {
     position: absolute;
