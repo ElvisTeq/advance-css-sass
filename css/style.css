@@ -290,7 +290,8 @@ body {
     position: absolute;
     width: auto;
     transform: translateY(2rem);
-    left: 55%;
+    width: 90%;
+    text-align: end;
     text-decoration: underline;
     text-decoration-color: #ffcb6a;
     text-decoration-thickness: 0.2rem;

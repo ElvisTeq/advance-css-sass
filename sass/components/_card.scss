@@ -86,14 +86,14 @@
     position: absolute;
     width: auto;
     transform: translateY(2rem);
-    left: 55%;
+    width: 90%;
+    text-align: end;
     text-decoration: underline;
     text-decoration-color: $color-primary;
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.5rem;
-
-    &--difficulty {
-    }
+  }
+  &--difficulty {
   }
 
   &__details {
