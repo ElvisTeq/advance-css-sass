@@ -160,3 +160,14 @@
 ------------------------------------ background-blend-mode: ;
 
 - Background color effects combined with images
+
+42.
+
+------------------------------------ <figure></figure>
+
+- Element to mark up a photo in a document
+
+------------------------------------ shape-outside: ;
+
+- To make outside element able to interact base on your shape
+- Has to be floated + height/width to work
