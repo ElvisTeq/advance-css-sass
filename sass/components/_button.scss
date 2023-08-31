@@ -19,7 +19,7 @@
   &:hover {
     transform: translateY(-0.3rem);
     /* UP DOWN BLUR COLOR */
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    box-shadow: 0 2rem 2.5rem rgba($color-black, 0.9);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -44,6 +44,7 @@
   &--yellow {
     background-color: $color-primary-light;
     color: $color-grey-soft;
+    box-shadow: 0 0.5rem 2.5rem rgba($color-black, 0.9);
 
     &::after {
       background-color: $color-primary;

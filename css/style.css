@@ -137,7 +137,7 @@ body {
   .btn:hover {
     transform: translateY(-0.3rem);
     /* UP DOWN BLUR COLOR */
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 2rem 2.5rem rgba(0, 0, 0, 0.9); }
     .btn:hover::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0; }
@@ -151,7 +151,8 @@ body {
       background-color: #ffffff; }
   .btn--yellow {
     background-color: #ffb62e;
-    color: #202020; }
+    color: #202020;
+    box-shadow: 0 0.5rem 2.5rem rgba(0, 0, 0, 0.9); }
     .btn--yellow::after {
       background-color: #ffcb6a; }
   .btn::after {
