@@ -1,0 +1,158 @@
+.card {
+  // Gives 3D to rotate animation perspective "has to be added on the parent ele"
+  perspective: 180rem;
+  -moz-perspective: 180rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    height: 50rem;
+    transition: all 0.8s ease;
+    // Positioning to the same place "Parent loses height value (we need to re-specify)"
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    // Hide oversized elements (images border radius)
+    overflow: hidden;
+    box-shadow: 0 1.5rem 2.5rem rgba($color-black, 0.9);
+
+    &--front {
+      background-color: $color-grey-soft;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // Card Front Side
+  &__picture-front {
+    background-size: cover;
+    height: 28rem;
+    // Background Modes
+    // background-blend-mode: lighten;
+
+    &--1 {
+      background-image: url(../img/ramen.png);
+    }
+
+    &--2 {
+      background-image: url(../../img/onigiri-2.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color-primary-dark;
+    position: absolute;
+    top: 23rem;
+    left: 2rem;
+    width: 50%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    // Fixes left/right padding when line breaks into another lane
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary, 0.85)
+      );
+    }
+  }
+
+  &__stats {
+    font-size: $default-font-size-medium;
+    position: absolute;
+    width: auto;
+    transform: translateY(2rem);
+    width: 90%;
+    text-align: end;
+    text-decoration: underline;
+    text-decoration-color: $color-primary;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.5rem;
+  }
+  &--difficulty {
+  }
+
+  &__details {
+    padding: 2rem;
+    font-size: $default-font-size-medium;
+    align-items: end;
+    margin-top: 4.5rem;
+    position: absolute;
+  }
+
+  &__more {
+    position: absolute;
+    margin-top: 18rem;
+    font-size: $default-font-size-small;
+    text-align: end;
+    width: 98%;
+    color: $color-primary-light;
+  }
+
+  ///////////////////////////// Card Back Side ////////////////////////////
+  &__cta {
+    position: absolute;
+    width: 100%;
+  }
+
+  &__picture-back {
+    background-size: cover;
+    height: 28rem;
+
+    &--1 {
+      background-image: url(../../img/real-ramen.jpg);
+    }
+
+    &--2 {
+      background-image: url(../../img/onigiri-real.jpg);
+    }
+  }
+
+  &__ingredients {
+    margin: 3rem 0 0 2.5rem;
+    font-size: $default-font-size-medium;
+
+    & > * {
+      margin: 1.2rem;
+    }
+
+    &-btn {
+      display: block;
+      text-align: end;
+      width: 100%;
+    }
+
+    &-header {
+    }
+
+    &-time {
+    }
+
+    &-servings {
+    }
+  }
+}

@@ -1,0 +1,175 @@
+6.
+
+--------------------------------- \* {}
+
+- Universal Selector (Apply CSS)
+
+8.
+
+--------------------------------- @keyframes [NAME]
+
+- Create animation
+
+--------------------------------- animation-name: [NAME]
+
+- Add animation created with @keyframes
+
+--------------------------------- backface-visibility: hidden;
+
+- Makes background hidden (fixes animation glitch after animation ends)
+
+  9.10.
+
+--------------------------------- ::
+
+- Creates a pseudo-element that is the last child of the selected element
+- To add cosmetic content to an element with the content property. It is inline by default.
+
+21.
+
+--------------------------------- BEM
+
+- technique for naming our classes
+
+24.
+
+---------------------------------- $[varName]: ;
+
+- To crease SASS var
+
+---------------------------------- @mixin [varName] {}
+
+- Create SASS mixin
+
+---------------------------------- @mixin [varName]($[varName]) {}
+
+- Create SASS mixin with argument
+
+---------------------------------- @include [mixinName];
+
+- Adding mixin to class element
+
+---------------------------------- darken/lighten(color,%)
+
+- function for color effect
+
+---------------------------------- @function [funcName]($a, $b) {$return;}
+
+- Create function in SASS
+
+---------------------------------- %[placeholder-name] {}
+
+- Similar to mixin (saves options)
+- But makes the code run from here (no copies) when compiled
+
+---------------------------------- @extend %[placeholder-name];
+
+- To add placeholder to elements
+
+26.
+
+---------------------------------- mkdir [directoryName]
+
+- Commands to create directory
+
+---------------------------------- edit [fileName]
+
+- Commands to create file
+
+---------------------------------- cp(copy) / mv(move) / del(delete) / open
+
+27.
+
+---------------------------------- npm i node-sass --save-dev
+
+- Instaslling SASS
+- --save-dev to mark up as a deleveloping tool
+
+28.
+
+---------------------------------- "compile:sass": "[name] [fileLocation] [compileDestination] -w"
+
+- "script" from "package.json" to compile SASS
+- -w = watch, auto compile after saving
+
+29.
+
+---------------------------------- npm i live-server -g
+
+- automatically reloads page when saved
+- live-server (on command console to run)
+
+31.
+
+---------------------------------- @import ''
+
+- Import SASS file
+
+---------------------------------- 7-1 CSS Architectire with SASS
+
+- see [FOLDER/FILES] - abstracts | base | components | layout | pages
+- main 7-1 files from [abstracts|base]
+
+34.
+
+---------------------------------- $not(:last-child) {}
+
+- Pseudo class for = everything but the last child
+
+---------------------------------- calc()
+
+- CSS built in function
+- To add SASS vars = #{&SASS-Variable}
+
+---------------------------------- [attribute | class^=""]
+
+- CSS Attribute Selector
+- ["^"] To select classes that "starts"
+- ["*"] To select classes that "contains"
+- ["$"] To select classes that "ends"
+
+35.
+
+---------------------------------- -webkit-background-clip: text;
+
+- Makes background to apply to the text
+
+---------------------------------- Utility Classes
+
+- We created <div class="u-center-text"> to reuse whenever we need to center an element in the DOM
+
+37.
+
+- implemented "z-index, outline, outline-offset" on images
+
+38.
+
+---------------------------------- & > \* {}
+
+- & all child elements
+
+39.
+
+- ---------------------------------- transform: rotateY/X(deg);
+- Rotating animation on mouse hover
+  ---------------------------------- perpective:
+- Adds 3D effect in rotate animation
+
+40.
+
+------------------------------------ background-blend-mode: ;
+
+- Background color effects combined with images
+
+42.
+
+------------------------------------ <figure></figure>
+
+- Element to mark up a photo in a document
+
+------------------------------------ shape-outside: ;
+
+- To make outside element able to interact base on your shape
+- Has to be floated + height/width to work
+
+-asdasdasdsadd
