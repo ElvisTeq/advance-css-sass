@@ -172,3 +172,14 @@
 - To make outside element able to interact base on your shape
 - Has to be floated + height/width to work
 
+43.
+
+------------------------------------ filter: ;
+
+-used to change blur/brighness of img
+
+44.
+
+------------------------------------ object-fit: cover;
+
+- used to rezise/fit the video size base to parent element 

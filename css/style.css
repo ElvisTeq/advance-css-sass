@@ -118,6 +118,19 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .15; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .btn {
   /* Changes to button default/visited */
   /* :: creates a pseudo-element that is the last child of the selected element */ }
@@ -334,7 +347,7 @@ body {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.9);
-  background-color: #202020;
+  background-color: rgba(32, 32, 32, 0.6);
   border-radius: 3px;
   padding: 5rem;
   padding-left: 6rem;
@@ -454,5 +467,5 @@ body {
   margin-top: -12rem; }
 
 .section-experience {
-  padding: 15rem;
-  background-color: #202020; }
+  position: relative;
+  padding: 15rem; }
