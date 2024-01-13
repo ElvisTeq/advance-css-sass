@@ -352,7 +352,10 @@ body {
     transform: translateX(-2rem) skewX(12deg);
     position: relative; }
   .experience__img {
-    height: 100%; }
+    height: 100%;
+    transform: translateX(-0.3rem) scale(1);
+    backface-visibility: hidden;
+    transition: all .5s; }
   .experience__text {
     font-size: 1.6rem;
     transform: skewX(12deg); }
@@ -360,11 +363,20 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 20%);
     color: #ffffff;
     text-transform: uppercase;
     font-size: 1.6rem;
-    text-align: center; }
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .experience:hover .experience__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .experience:hover .experience__img {
+    transform: translateX(-0.3rem) scale(1.1);
+    filter: blur(3px) brightness(60%); }
 
 .row {
   max-width: 114rem;
