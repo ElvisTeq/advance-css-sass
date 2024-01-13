@@ -469,3 +469,14 @@ body {
 .section-experience {
   position: relative;
   padding: 15rem; }
+
+.section-subscribe {
+  padding: 15rem;
+  background-image: linear-gradient(to right bottom, #ffb62e, #724705); }
+
+.sub {
+  background-image: url(../../img/bacon&eggs.png);
+  background-size: cover;
+  border-radius: 2px;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.9);
+  height: 50rem; }

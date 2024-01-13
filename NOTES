@@ -176,10 +176,16 @@
 
 ------------------------------------ filter: ;
 
--used to change blur/brighness of img
+- used to change blur/brighness of img
 
 44.
 
 ------------------------------------ object-fit: cover;
 
 - used to rezise/fit the video size base to parent element 
+
+------------------------------------ <video><source></video>
+
+- html to add videos
+
+45.
