@@ -475,7 +475,7 @@ body {
   background-image: linear-gradient(to right bottom, #ffb62e, #724705); }
 
 .sub {
-  background-image: url(../../img/bacon&eggs.png);
+  background-image: linear-gradient(105deg, rgba(255, 182, 46, 0.9) 0%, #724705 50%) url(../../img/bacon&eggs.png);
   background-size: cover;
   border-radius: 2px;
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.9);
