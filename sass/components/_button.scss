@@ -1,0 +1,102 @@
+.btn {
+  /* Changes to button default/visited */
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $default-font-size-small;
+    /* button size */
+    padding: 1.5rem 4rem;
+    /* Will not overlap to other lines (elements) */
+    display: inline-block;
+    border-radius: 10rem;
+    /* Apply animation options to all (children) */
+    transition: all 0.2s;
+    /* For child elements to position from here */
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    /* UP DOWN BLUR COLOR */
+    box-shadow: 0 2rem 2.5rem rgba($color-black, 0.9);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--yellow {
+    background-color: $color-primary-light;
+    color: $color-grey-soft;
+    box-shadow: 0 0.5rem 2.5rem rgba($color-black, 0.9);
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
+  /* :: creates a pseudo-element that is the last child of the selected element */
+  &::after {
+    content: "";
+    display: inline-block;
+    /* This is treated like a child element of the original */
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    /* Will be positioned based on the closest parent element with "relative" position */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Positioning element to be behind */
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    /* keyframe, animationTime, effect, delay */
+    animation: moveInButton 0.5s ease-out 0.75s;
+    /* animation starts backwards */
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size-small;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary-light;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $color-primary-dark;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(0);
+  }
+}

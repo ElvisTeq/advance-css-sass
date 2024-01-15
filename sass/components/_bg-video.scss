@@ -1,0 +1,17 @@
+.bg-video {
+    // parent needs to be position: relative
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .15;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        // bsae to parent element
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,537 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Make sure to include pseudo elements also inherits */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* all elements will inherit from body */
+  box-sizing: inherit;
+}
+
+html {
+  /* Defining "1rem" so it escalates with all platforms default root px */
+  /* We want 10px, so, 16/62.5 = 10 */
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgb(34, 34, 34);
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #c4c2c2;
+  padding: 3rem;
+  /* all elements will inherit here, because = box-sizing: inherit in [*] */
+  box-sizing: border-box;
+}
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+  /* Fix animation glitch (hides backgroung) */
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+.heading-primary--main {
+  display: block; /* makes it take all line */
+  font-size: 6rem;
+  font-weight: 600;
+  letter-spacing: 3.5rem;
+  /* Adding animation created with @keyframes */
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1.74rem;
+  /* Can be shortened all in one */
+  animation: moveInRight 1s ease-out;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #ffb62e, #724705);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+.heading-secondary:hover {
+  transform: skewY(1deg) skewX(2deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.9);
+}
+
+.heading-tertiary {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem;
+}
+
+.btn {
+  /* Changes to button default/visited */
+  /* :: creates a pseudo-element that is the last child of the selected element */
+}
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  /* button size */
+  padding: 1.5rem 4rem;
+  /* Will not overlap to other lines (elements) */
+  display: inline-block;
+  border-radius: 10rem;
+  /* Apply animation options to all (children) */
+  transition: all 0.2s;
+  /* For child elements to position from here */
+  position: relative;
+}
+.btn:hover {
+  transform: translateY(-0.3rem);
+  /* UP DOWN BLUR COLOR */
+  box-shadow: 0 2rem 2.5rem rgba(0, 0, 0, 0.9);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.btn--white {
+  background-color: #ffffff;
+  color: #777;
+}
+.btn--white::after {
+  background-color: #ffffff;
+}
+.btn--yellow {
+  background-color: #ffb62e;
+  color: #202020;
+  box-shadow: 0 0.5rem 2.5rem rgba(0, 0, 0, 0.9);
+}
+.btn--yellow::after {
+  background-color: #ffcb6a;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  /* This is treated like a child element of the original */
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  /* Will be positioned based on the closest parent element with "relative" position */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Positioning element to be behind */
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn--animated {
+  /* keyframe, animationTime, effect, delay */
+  animation: moveInButton 0.5s ease-out 0.75s;
+  /* animation starts backwards */
+  animation-fill-mode: backwards;
+}
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #ffcb6a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #ffb62e;
+  padding: 3px;
+  transition: all 0.2s;
+}
+.btn-text:hover {
+  background-color: #724705;
+  color: #ffffff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 65%;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.9);
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.2s;
+  outline-offset: 1rem;
+}
+.composition__photo--p1 {
+  left: 50%;
+  top: -10rem;
+}
+.composition__photo--p2 {
+  left: 25%;
+  top: -3rem;
+}
+.composition__photo--p3 {
+  left: 0%;
+  top: 4rem;
+}
+.composition__photo:hover {
+  outline: 1rem solid #ffb62e;
+  transform: scale(1.2) translateY(-1rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
+}
+
+.feature-box {
+  min-height: 31rem;
+  background-color: rgba(32, 32, 32, 0.9);
+  font-size: 1.6rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.9);
+  transition: transform 0.3s;
+}
+.feature-box__icon {
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  background-image: linear-gradient(to right, #ffb62e, #724705);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.feature-box:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+}
+
+.card {
+  perspective: 180rem;
+  -moz-perspective: 180rem;
+  position: relative;
+  height: 50rem;
+}
+.card__side {
+  height: 50rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.9);
+}
+.card__side--front {
+  background-color: #202020;
+}
+.card__side--back {
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
+.card__picture-front {
+  background-size: cover;
+  height: 28rem;
+}
+.card__picture-front--1 {
+  background-image: url(../img/ramen.png);
+}
+.card__picture-front--2 {
+  background-image: url(../../img/onigiri-2.jpg);
+}
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #724705;
+  position: absolute;
+  top: 23rem;
+  left: 2rem;
+  width: 50%;
+}
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.card__heading-span--1 {
+  background-image: linear-gradient(to right bottom, rgba(255, 182, 46, 0.85), rgba(255, 203, 106, 0.85));
+}
+.card__stats {
+  font-size: 1.8rem;
+  position: absolute;
+  width: auto;
+  transform: translateY(2rem);
+  width: 90%;
+  text-align: end;
+  text-decoration: underline;
+  text-decoration-color: #ffcb6a;
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.5rem;
+}
+.card__details {
+  padding: 2rem;
+  font-size: 1.8rem;
+  align-items: end;
+  margin-top: 4.5rem;
+  position: absolute;
+}
+.card__more {
+  position: absolute;
+  margin-top: 18rem;
+  font-size: 1.6rem;
+  text-align: end;
+  width: 98%;
+  color: #ffb62e;
+}
+.card__cta {
+  position: absolute;
+  width: 100%;
+}
+.card__picture-back {
+  background-size: cover;
+  height: 28rem;
+}
+.card__picture-back--1 {
+  background-image: url(../../img/real-ramen.jpg);
+}
+.card__picture-back--2 {
+  background-image: url(../../img/onigiri-real.jpg);
+}
+.card__ingredients {
+  margin: 3rem 0 0 2.5rem;
+  font-size: 1.8rem;
+}
+.card__ingredients > * {
+  margin: 1.2rem;
+}
+.card__ingredients-btn {
+  display: block;
+  text-align: end;
+  width: 100%;
+}
+.experience {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.9);
+  background-color: #202020;
+  border-radius: 3px;
+  padding: 5rem;
+  padding-left: 6rem;
+  font-size: 1.8rem;
+  min-height: 25rem;
+  transform: skewX(-12deg);
+}
+.experience__shape {
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  transform: translateX(-2rem) skewX(12deg);
+  position: relative;
+}
+.experience__img {
+  height: 100%;
+}
+.experience__text {
+  font-size: 1.6rem;
+  transform: skewX(12deg);
+}
+.experience__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^=col-] {
+  float: left;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-2-of-3 {
+  width: calc(2 * (100% - 2 * 6rem) / 3 + 6rem);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+.row .col-2-of-4 {
+  width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem);
+}
+.row .col-3-of-4 {
+  width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
+}
+
+.header {
+  /* View port of the header, controll how much to show on the screen */
+  height: 95vh;
+  /* Adding 2 images, linear-gradient on top of the actual image for additional effect */
+  background-image: linear-gradient(to right bottom, rgba(255, 182, 46, 0.7), rgba(114, 71, 5, 0.7)), url(../img/header.jpg);
+  /* cover = to fit inside the elements view port */
+  background-size: cover;
+  background-position: top;
+  /* position on child elements will be based on here */
+  position: relative;
+  /* Crop header */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* (x y) */
+  /* Nested Header Elements */
+}
+.header__logo-box {
+  /* absolute position to parent element */
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+}
+.header__logo {
+  height: 15rem;
+}
+.header__text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Change position based on current position */
+  transform: translate(-50%, -80%);
+  text-align: center;
+}
+
+.section-about {
+  background-color: #202020;
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
+
+.section-features {
+  padding: 20rem 0;
+  margin-top: -12rem;
+  background-image: linear-gradient(to right bottom, rgba(255, 182, 46, 0.7), rgba(114, 71, 5, 0.7)), url(../img/snacks.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+}
+.section-features > * {
+  transform: skewY(7deg);
+}
+
+.section-dishes {
+  background-color: #202020;
+  padding: 25rem 0 15rem 0;
+  margin-top: -12rem;
+}
+
+.section-experience {
+  padding: 15rem;
+  background-color: #202020;
+}/*# sourceMappingURL=main.css.map */

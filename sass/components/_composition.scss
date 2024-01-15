@@ -1,0 +1,40 @@
+.composition {
+  // Child elements position will be based on here
+  position: relative;
+
+  &__photo {
+    width: 65%;
+    box-shadow: 0 1.5rem 2rem rgba($color-black, 0.9);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 1rem;
+
+    &--p1 {
+      left: 50%;
+      top: -10rem;
+    }
+
+    &--p2 {
+      left: 25%;
+      top: -3rem;
+    }
+
+    &--p3 {
+      left: 0%;
+      top: 4rem;
+    }
+
+    &:hover {
+      outline: 1rem solid $color-primary-light;
+      transform: scale(1.2) translateY(-1rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      z-index: 20;
+    }
+  }
+  // On hover, select all the photos that are "not on hover"
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}
