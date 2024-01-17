@@ -198,5 +198,9 @@
 
 ------------------------------------ class__input:placeholder-shown + class __label
 
-- CSS to chanse something if requirement mets 
-- if placeholder in __input, then edit __label
+- CSS to chanse something before requirement mets 
+- if placeholder in __input, then remove __label
+
+47.
+
+- input type="radius" with the same name will only be able to select 1

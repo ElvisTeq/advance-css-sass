@@ -1,5 +1,9 @@
 .form {
 
+  &__title {
+   margin-top: -9%;
+  }
+
     &__group:not(:last-child) {
         margin-bottom: 2rem;
     }
@@ -15,6 +19,7 @@
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
+        transition: all .3s;
 
         // cutomizing focus
      &:focus {
@@ -44,10 +49,60 @@
        transition: all .3s;
     }
 
+      // + direct child selector
       // If placeholder is shown, remove __label changes
     &__input:placeholder-shown + &__label {
       opacity: 0;
       visibility: hidden;
       transform: translateY(-4rem);
+    }
+
+    &__radio-group {
+      width: 49%;
+      display: inline-block;
+    }
+
+    &__radio-input {
+      display: none;
+    }
+
+    &__radio-label {
+      font-size: $default-font-size-smaller;
+      position: relative;
+      cursor: pointer;
+      left: 2.5rem;
+    }
+
+    &__radio-button {
+       height: 2rem;
+       width: 2rem;
+       border: 4px solid $color-primary-light;
+       border-radius: 50%;
+       display: inline-block;
+       position: absolute;
+       left: -2.5rem;
+       top: -.3rem;
+
+       &::after {
+        content: '';
+        display: inline-block;
+        height: .5rem;
+        width: .5rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 53%;
+        left: 49.5%;
+        transform: translate(-50%, -50%);
+        background-color: $color-primary;
+        opacity: 0;
+        transition: opacity .2s;
+       }
+    }
+
+      // ~ => select sibling's child 
+      // if radio-input = checked => radio-button edit
+    &__radio-input:checked ~ &__radio-label &__radio-button:after {
+      opacity: 1;
+
     }
 }
