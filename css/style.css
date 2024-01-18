@@ -81,7 +81,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #ffb62e, #724705);
+  background-image: linear-gradient(to right, #ffb62e, #ffcb6a);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
@@ -438,7 +438,7 @@ body {
   display: none; }
 
 .form__radio-label {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   position: relative;
   cursor: pointer;
   left: 2.5rem; }
@@ -550,7 +550,7 @@ body {
 
 .section-subscribe {
   padding: 15rem;
-  background-image: linear-gradient(to right bottom, rgba(255, 182, 46, 0.6), rgba(114, 71, 5, 0.3)); }
+  background-image: linear-gradient(to right bottom, rgba(255, 182, 46, 0), rgba(255, 203, 106, 0.5)); }
 
 .sub {
   background-image: linear-gradient(105deg, rgba(32, 32, 32, 0.8) 0%, rgba(32, 32, 32, 0.8) 50%, transparent 50%), url(../../img/bacon&eggs.png);
