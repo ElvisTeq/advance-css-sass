@@ -528,6 +528,36 @@ body {
     transform: translate(-50%, -80%);
     text-align: center; }
 
+.footer {
+  background-color: #202020;
+  color: #ffffff; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 2rem; }
+  .footer__navigation {
+    border-top: 1px solid #ffcb6a;
+    padding-top: 2rem;
+    float: right; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #ffffff;
+    background-color: #202020;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s; }
+  .footer__link:hover, .footer__link:active {
+    color: #ffb62e;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.9);
+    transform: scale(1.1); }
+  .footer__copyright {
+    border-top: 1px solid #ffcb6a;
+    padding-top: 2rem;
+    display: inline-block; }
+
 .section-about {
   background-color: #202020;
   padding: 25rem 0;
