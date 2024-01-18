@@ -1,5 +1,6 @@
 .btn {
   /* Changes to button default/visited */
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -14,6 +15,9 @@
     transition: all 0.2s;
     /* For child elements to position from here */
     position: relative;
+
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -27,7 +31,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
