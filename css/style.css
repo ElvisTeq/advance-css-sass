@@ -492,9 +492,9 @@ body {
   position: fixed;
   top: 5.5rem;
   right: 5.5rem;
-  background-image: radial-gradient(#ffb62e, #724705);
+  background-image: radial-gradient(#ffb62e, #724705 65%);
   z-index: 100;
-  transform: scale(75); }
+  transform: scale(100); }
 
 .navigation__nav {
   height: 100vh;
@@ -530,7 +530,8 @@ body {
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
   color: #724705;
-  transform: translateX(-1rem); }
+  transform: translateX(-1rem);
+  border-radius: 5px; }
 
 .row {
   max-width: 114rem;

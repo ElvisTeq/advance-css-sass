@@ -22,10 +22,10 @@
         position: fixed;
         top: 5.5rem;
         right: 5.5rem;
-        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        background-image: radial-gradient($color-primary-light, $color-primary-dark 65%);
         z-index: 100;
 
-        transform: scale(75);
+        transform: scale(100);
     }
 
     &__nav {
@@ -71,6 +71,7 @@
             background-position: 100%;
             color: $color-primary-dark;
             transform: translateX(-1rem);
+            border-radius: 5px;
         }
     }
 }
