@@ -6,26 +6,26 @@
 
     &__button{
         background-color: $color-white;
-        height: 7rem;
-        width: 7rem;
+        height: 6rem;
+        width: 6rem;
         position: fixed;
-        top: 6rem;
-        right: 6rem;
-        border-radius: 50%;
+        top: 5rem;
+        right: 5rem;
+        border-radius: 25%;
         z-index: 200;
     }
 
     &__background {
-        height: 6rem;
-        width: 6rem;
-        border-radius: 50%;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 25%;
         position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
+        top: 5.5rem;
+        right: 5.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 100;
 
-        transform: scale(60);
+        transform: scale(75);
     }
 
     &__nav {
@@ -69,7 +69,7 @@
         &:hover,
         &:active {
             background-position: 100%;
-            color: $color-primary-light;
+            color: $color-primary-dark;
             transform: translateX(-1rem);
         }
     }

@@ -477,24 +477,24 @@ body {
 
 .navigation__button {
   background-color: #ffffff;
-  height: 7rem;
-  width: 7rem;
+  height: 6rem;
+  width: 6rem;
   position: fixed;
-  top: 6rem;
-  right: 6rem;
-  border-radius: 50%;
+  top: 5rem;
+  right: 5rem;
+  border-radius: 25%;
   z-index: 200; }
 
 .navigation__background {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 25%;
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 5.5rem;
+  right: 5.5rem;
   background-image: radial-gradient(#ffb62e, #724705);
   z-index: 100;
-  transform: scale(60); }
+  transform: scale(75); }
 
 .navigation__nav {
   height: 100vh;
@@ -529,7 +529,7 @@ body {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #ffb62e;
+  color: #724705;
   transform: translateX(-1rem); }
 
 .row {
@@ -550,13 +550,13 @@ body {
   .row .col-1-of-3 {
     width: calc((100% - 2 * 6rem) / 3); }
   .row .col-2-of-3 {
-    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 6rem) / 4); }
   .row .col-2-of-4 {
-    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
-    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .header {
   /* View port of the header, controll how much to show on the screen */
