@@ -15,6 +15,8 @@
         border-radius: 25%;
         z-index: 200;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
     }
 
     &__background {
@@ -90,5 +92,56 @@
     &__checkbox:checked ~ &__nav {
         opacity: 1;
         width: 100%;
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 2.6rem;
+
+        // turning 1 lane into 3 using ::before/after
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-primary;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            transition: all .4s;
+        }
+
+        // top lane
+        &::before {top: -1rem;}
+        // botton lante
+        &::after {top: 1rem;}
+    }
+
+    &__button:hover &__icon::before {
+        top: -1.4rem;
+    }
+    &__button:hover &__icon::after {
+        top: 1.4rem;
+    }
+
+    // + => to select brother element
+    // Mid lane
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+    // top lane
+    &__checkbox:checked + &__button &__icon::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    // bot lane
+    &__checkbox:checked + &__button &__icon::after {
+        transform: rotate(-45deg);
+        top: 0;
     }
 }
