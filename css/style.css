@@ -472,23 +472,6 @@ body {
 .form__radio-input:checked ~ .form__radio-label .form__radio-button:after {
   opacity: 1; }
 
-.popup {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: rgba(32, 32, 32, 0.9);
-  z-index: 300;
-  text-align: center; }
-  .popup__content {
-    position: relative;
-    top: 22%;
-    left: 10%;
-    height: 40rem;
-    width: 80%;
-    background-color: #ffffff; }
-
 .navigation__checkbox {
   display: none; }
 
@@ -512,7 +495,7 @@ body {
   position: fixed;
   top: 5rem;
   right: 5rem;
-  background-image: radial-gradient(#ffcb6a, #ffb62e 65%);
+  background-image: radial-gradient(#ffb62e, #724705 70%);
   z-index: 100;
   transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1); }
 
@@ -617,13 +600,13 @@ body {
   .row .col-1-of-3 {
     width: calc((100% - 2 * 6rem) / 3); }
   .row .col-2-of-3 {
-    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 6rem) / 4); }
   .row .col-2-of-4 {
-    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
-    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .header {
   /* View port of the header, controll how much to show on the screen */
