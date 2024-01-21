@@ -532,7 +532,11 @@ body {
       left: 5%; }
     .popup__button__next {
       position: absolute;
-      right: 5%; }
+      right: 5%;
+      font-size: 1.6rem;
+      border-bottom: 1px solid #ffb62e; }
+    .popup__button__checkbox {
+      display: none; }
 
 .navigation__checkbox {
   display: none; }
