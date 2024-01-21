@@ -204,3 +204,11 @@
 47.
 
 - input type="radius" with the same name will only be able to select 1
+
+52.
+
+------------------------------------ display: table 
+- parent
+------------------------------------ display: table cell
+- child
+------------------------------------ vertical-align: middle
