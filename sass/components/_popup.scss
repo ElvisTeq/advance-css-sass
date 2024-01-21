@@ -6,12 +6,13 @@
     left: 0;
     background-color: rgba($color-grey-soft, .8);
     z-index: 300;
+    color: $color-primary;
 
     &__content {
         width: 75%;
         @include absCenter;
         border-radius: 3px;
-        background-color: $color-white;
+        background-color: $color-grey-soft;
         box-shadow: $default-shadow;
         display: table;
         overflow: hidden;
@@ -35,20 +36,48 @@
     }
 
     &__text {
+        font-size: $default-font-size-medium;
+        font-weight: 800;
+        color: $color-primary-light;
+    }
+
+    &__list {
         font-size: 1.4rem;
-        margin-bottom: 4rem;
+        margin-bottom: 1.5rem;
 
         -moz-column-count: 2;
         -moz-column-gap: 4rem;
-        -moz-column-rule: 1px solid $color-grey-soft;
+        -moz-column-rule: 1px solid $color-primary-dark;
 
         column-count: 2;
         column-gap: 4rem;
-        column-rule: 1px solid $color-grey-soft;
+        column-rule: 1px solid $color-primary-dark;
 
         -moz-hyphens: auto;
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
     }
+
+    &__item{
+        font-size: $default-font-size-small;
+        font-weight: 500;
+        margin-top: .2rem;
+        position: relative;
+    }
+
+    &__button {
+        position: relative;
+        font-weight: 800;
+
+        &__copy {
+            left: 5%;
+        }
+
+        &__next {
+            position: absolute;
+            right: 5%
+        }
+    }
+
 }
