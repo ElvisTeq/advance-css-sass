@@ -506,10 +506,12 @@ body {
   .popup__text {
     font-size: 1.8rem;
     font-weight: 800;
-    color: #ffb62e; }
+    color: #ffb62e;
+    margin-bottom: 1rem; }
   .popup__list {
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
+    list-style: none;
     -moz-column-count: 2;
     -moz-column-gap: 4rem;
     -moz-column-rule: 1px solid #724705;
@@ -524,19 +526,51 @@ body {
     font-size: 1.6rem;
     font-weight: 500;
     margin-top: .2rem;
-    position: relative; }
+    position: relative;
+    color: #ffffff; }
   .popup__button {
     position: relative;
     font-weight: 800; }
     .popup__button__copy {
       left: 5%; }
-    .popup__button__next {
-      position: absolute;
-      right: 5%;
-      font-size: 1.6rem;
-      border-bottom: 1px solid #ffb62e; }
-    .popup__button__checkbox {
-      display: none; }
+  .popup__checkbox {
+    display: none; }
+  .popup__next {
+    position: absolute;
+    right: 5%;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #ffb62e;
+    bottom: 15%; }
+  .popup__next__page {
+    height: 75vh;
+    width: 0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    background-color: #202020;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    width: 0%; }
+  .popup__next__page__back {
+    position: absolute;
+    right: 5%;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #ffb62e;
+    opacity: 0;
+    width: 0%;
+    font-weight: 800; }
+  .popup__checkbox:checked ~ .popup__next__page {
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    z-index: 999; }
+  .popup__checkbox:checked ~ .popup__next__page .popup__next__page__back {
+    opacity: 1;
+    width: 100%;
+    bottom: 15%;
+    left: 0; }
 
 .navigation__checkbox {
   display: none; }

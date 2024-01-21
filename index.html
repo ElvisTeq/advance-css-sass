@@ -352,6 +352,8 @@
 
     <div class="popup">
       <div class="popup__content">
+        <input type="checkbox" class="popup__checkbox" id="popup__toggle">
+                
         <div class="popup__left">
           <img class="popup__img" src="img/real-ramen.jpg" alt="Anime ramen">
           <img class="popup__img" src="img/ramen.png" alt="Real ramen">
@@ -382,11 +384,13 @@
           </li>
           <div class="popup__button">
             <a href="#" class="btn-text popup__button__copy">Copy</a>
-            <input type="checkbox" class="popup__button__checkbox" id="popup__toggle">
-            <label for="popup__toggle" class="btn-text popup__button__next">Next &rarr;</label>
+            <label for="popup__toggle" class="btn-text popup__next">Next &rarr;</label>
+            
           </div>
         </div>
-      </div>
+        <div class="popup__next__page">
+            <label for="popup__toggle" class="btn-text popup__next__page__back">Back &rarr;</label>
+        </div>
     </div>
 
     <!--

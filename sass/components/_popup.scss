@@ -39,11 +39,13 @@
         font-size: $default-font-size-medium;
         font-weight: 800;
         color: $color-primary-light;
+        margin-bottom: 1rem;
     }
 
     &__list {
         font-size: 1.4rem;
         margin-bottom: 1.5rem;
+        list-style: none;
 
         -moz-column-count: 2;
         -moz-column-gap: 4rem;
@@ -64,6 +66,7 @@
         font-weight: 500;
         margin-top: .2rem;
         position: relative;
+        color: $color-white;
     }
 
     &__button {
@@ -73,17 +76,57 @@
         &__copy {
             left: 5%;
         }
+    }
 
-        &__next {
+    &__checkbox {
+            display: none;
+        }
+
+    &__next {
             position: absolute;
             right: 5%;
             font-size: $default-font-size-small;
             border-bottom: 1px solid $color-primary-light;
+            bottom: 15%;
         }
 
-        &__checkbox {
-            display: none;
+    
+
+    &__next__page {
+         height: 75vh;
+          width: 0%;
+         @include absCenter;
+         border-radius: 3px;
+        background-color: $color-grey-soft;
+        box-shadow: $default-shadow;
+        opacity: 0;
+        width: 0%;
         }
+    
+    &__next__page__back {
+            position: absolute;
+             right: 5%;
+            font-size: $default-font-size-small;
+            border-bottom: 1px solid $color-primary-light;
+            opacity: 0;
+            width: 0%;
+            font-weight: 800;
+        }
+    
+
+    &__checkbox:checked ~ &__next__page {
+        position: absolute;
+        opacity: 1;
+        width: 100%;
+        z-index: 999;
+    }
+
+    &__checkbox:checked ~ &__next__page &__next__page__back {
+        opacity: 1;
+        width: 100%;
+        bottom: 15%;
+        left: 0;
+        
     }
 
 }
