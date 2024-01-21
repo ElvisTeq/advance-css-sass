@@ -1,6 +1,7 @@
 .footer {
     background-color: $color-grey-soft;
     color: $color-white;
+    font-size: $default-font-size-smaller;
 
     &__logo-box {
         text-align: center;
@@ -46,7 +47,7 @@
         &:active {
             color: $color-primary-light;
             box-shadow: $default-shadow;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
     }
 

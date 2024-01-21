@@ -1,7 +1,7 @@
 .experience {
   width: 75%;
   margin: 0 auto;
-  box-shadow: 0 1.5rem 2.5rem rgba($color-black, 0.9);
+  box-shadow: 0 1.5rem 2.5rem rgba($color-black, 0.6);
   background-color: rgba($color-grey-soft, .6);
   border-radius: 3px;
   padding: 5rem;
@@ -28,7 +28,7 @@
   &__img {
     // Base on parent element "__shape"
     height: 100%;
-    transform: translateX(-.3rem) scale(1);
+    transform: translateX() scale(1);
     backface-visibility: hidden;
     transition: all .5s;
 
@@ -36,7 +36,7 @@
   }
 
   &__text {
-    font-size: $default-font-size-small;
+    font-size: $default-font-size-medium;
     transform: skewX(12deg);
   }
 

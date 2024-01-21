@@ -349,7 +349,7 @@ body {
 .experience {
   width: 75%;
   margin: 0 auto;
-  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.6);
   background-color: rgba(32, 32, 32, 0.6);
   border-radius: 3px;
   padding: 5rem;
@@ -369,11 +369,11 @@ body {
     position: relative; }
   .experience__img {
     height: 100%;
-    transform: translateX(-0.3rem) scale(1);
+    transform: translateX() scale(1);
     backface-visibility: hidden;
     transition: all .5s; }
   .experience__text {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     transform: skewX(12deg); }
   .experience__caption {
     position: absolute;
@@ -640,7 +640,8 @@ body {
 
 .footer {
   background-color: #202020;
-  color: #ffffff; }
+  color: #ffffff;
+  font-size: 1.3rem; }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 2rem; }
@@ -662,7 +663,7 @@ body {
   .footer__link:hover, .footer__link:active {
     color: #ffb62e;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.9);
-    transform: scale(1.1); }
+    transform: scale(1.05); }
   .footer__copyright {
     border-top: 1px solid #ffcb6a;
     padding-top: 2rem;
