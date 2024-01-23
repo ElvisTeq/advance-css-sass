@@ -43,7 +43,7 @@
           <span class="heading-primary--main">Animake</span>
           <span class="heading-primary--sub">From Fiction to Reality</span>
         </h1>
-        <a href="#" class="btn btn--white btn--animated">Discover Recipes</a>
+        <a href="#section-dishes" class="btn btn--white btn--animated">Discover Recipes</a>
       </div>
     </header>
 
@@ -143,7 +143,7 @@
         </div>
       </section>
 
-      <section class="section-dishes">
+      <section class="section-dishes" id="section-dishes">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">Popular Dishes</h2>
         </div>
@@ -182,7 +182,7 @@
                       Yield : 2 Servings
                     </div>
                   </div>
-                  <a href="#" class="card__ingredients-btn btn-text"
+                  <a href="#popup" class="card__ingredients-btn btn-text"
                     >Recipe &larr;</a
                   >
                 </div>
@@ -350,7 +350,7 @@
       </div>
     </footer>
 
-    <div class="popup">
+    <div class="popup" id="popup">
       <div class="popup__content">
         <input type="checkbox" class="popup__checkbox" id="popup__toggle">
                 
@@ -359,6 +359,7 @@
           <img class="popup__img" src="img/ramen.png" alt="Real ramen">
         </div>
         <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
           <h2 class="heading-secondary u-margin-bottom-small">Egg & Pork Ramen</h2>
           <p class="popup__text">Ingredients:</p>
           <li class="popup__list">
@@ -389,7 +390,8 @@
           </div>
         </div>
         <div class="popup__next__page">
-            <label for="popup__toggle" class="btn-text popup__next__page__back">Back &rarr;</label>
+          <label for="popup__toggle" class="btn-text popup__next__page__back">Back &rarr;</label>
+
         </div>
     </div>
 

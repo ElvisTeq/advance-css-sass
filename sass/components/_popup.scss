@@ -7,6 +7,11 @@
     background-color: rgba($color-grey-soft, .8);
     z-index: 300;
     color: $color-primary;
+    opacity: 0;
+    visibility: hidden;
+    transition:  all .3s;
+
+    
 
     &__content {
         width: 75%;
@@ -16,6 +21,12 @@
         box-shadow: $default-shadow;
         display: table;
         overflow: hidden;
+
+        // for opening effects
+        opacity: 0;
+        // only 1 transform allowed => so we combine them into 1
+        transform: translate(-50%, -50%) scale(0);
+        transition: all .5s .2s;
     }
 
     &__left {
@@ -82,6 +93,7 @@
             display: none;
         }
 
+        // popup next page
     &__next {
             position: absolute;
             right: 5%;
@@ -91,25 +103,27 @@
         }
 
     
-
+        // popup next page
     &__next__page {
-         height: 75vh;
-          width: 0%;
-         @include absCenter;
-         border-radius: 3px;
+        height: 70vh;
+        width: 0%;
+        @include absCenter;
+        border-radius: 3px;
         background-color: $color-grey-soft;
         box-shadow: $default-shadow;
         opacity: 0;
         width: 0%;
+        right: 0;
+        transition: all 1s;
         }
     
+        // popup back page button
     &__next__page__back {
             position: absolute;
              right: 5%;
             font-size: $default-font-size-small;
             border-bottom: 1px solid $color-primary-light;
             opacity: 0;
-            width: 0%;
             font-weight: 800;
         }
     
@@ -118,7 +132,6 @@
         position: absolute;
         opacity: 1;
         width: 100%;
-        z-index: 999;
     }
 
     &__checkbox:checked ~ &__next__page &__next__page__back {
@@ -127,6 +140,44 @@
         bottom: 15%;
         left: 0;
         
+    }
+
+    // Recipe on click
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    // popup open effect
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    // popup close button
+    &__close {
+        background-color: $color-white;
+        position: absolute;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        text-align: center;
+
+        &:link,
+        &:visited {
+            color: $color-primary-dark;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 4rem;
+            text-decoration: none;
+            display: inline-block;
+            line-height: .9;
+        }
+
+        &:hover {
+            color: $color-primary-light;
+        }
     }
 
 }
