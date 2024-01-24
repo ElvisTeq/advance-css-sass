@@ -114,7 +114,7 @@
         opacity: 0;
         width: 0%;
         right: 0;
-        transition: all .3s;
+        transition: all 0.4s;
         }
     
         // popup back page button
@@ -168,6 +168,12 @@
     &__direction-item {
         padding-top: 2rem;
         font-weight: 500;
+        transform: scale(.2);
+        transition: all 1s;
+    }
+
+    &__checkbox:checked ~ &__next__page &__direction-list &__direction-item {
+        transform: scale(1);
     }
     
 

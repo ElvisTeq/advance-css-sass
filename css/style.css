@@ -343,7 +343,7 @@ body {
       margin: 1.2rem; }
     .card__ingredients-btn {
       display: block;
-      text-align: end;
+      text-align: center;
       width: 100%; }
 
 .experience {
@@ -446,7 +446,8 @@ body {
   font-size: 1.3rem;
   position: relative;
   cursor: pointer;
-  left: 2.5rem; }
+  left: 2.5rem;
+  font-weight: 900; }
 
 .form__radio-button {
   height: 2rem;
@@ -562,7 +563,7 @@ body {
     opacity: 0;
     width: 0%;
     right: 0;
-    transition: all .3s; }
+    transition: all 0.4s; }
   .popup__next__page__back {
     position: absolute;
     font-size: 1.8rem;
@@ -599,7 +600,11 @@ body {
     line-height: 0; }
   .popup__direction-item {
     padding-top: 2rem;
-    font-weight: 500; }
+    font-weight: 500;
+    transform: scale(0.2);
+    transition: all 1s; }
+  .popup__checkbox:checked ~ .popup__next__page .popup__direction-list .popup__direction-item {
+    transform: scale(1); }
   .popup__checkbox:checked ~ .popup__next__page {
     position: absolute;
     opacity: 1;
