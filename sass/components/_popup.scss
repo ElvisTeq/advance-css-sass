@@ -105,7 +105,7 @@
     
         // popup next page
     &__next__page {
-        height: 70vh;
+        height: 100%;
         width: 0%;
         @include absCenter;
         border-radius: 3px;
@@ -114,18 +114,61 @@
         opacity: 0;
         width: 0%;
         right: 0;
-        transition: all 1s;
+        transition: all .3s;
         }
     
         // popup back page button
     &__next__page__back {
-            position: absolute;
-             right: 5%;
-            font-size: $default-font-size-small;
-            border-bottom: 1px solid $color-primary-light;
-            opacity: 0;
-            font-weight: 800;
-        }
+        position: absolute;
+        font-size: $default-font-size-medium;
+        border-bottom: 1px solid $color-primary-light;
+        opacity: 0;
+        font-weight: 800;
+    }
+
+    &__direction-text {
+        font-size: $default-font-size-medium;
+        font-weight: 900;
+        color: $color-primary-light;
+        margin-left: 3rem;
+        margin-top: 3rem;
+    }
+
+    &__direction-list {
+        font-size: $default-font-size-small;
+        width: 100%;
+        font-weight: 500;
+        padding: 1.5rem;
+        position: relative;
+        color: $color-white;
+
+        list-style: none;
+
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem;
+        -moz-column-rule: 1px solid $color-primary-dark;
+
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-primary-dark;
+
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+
+    }
+
+    &__number-list {
+        color: $color-primary-light;
+        font-size: 3rem;
+        line-height: 0;
+    }
+
+    &__direction-item {
+        padding-top: 2rem;
+        font-weight: 500;
+    }
     
 
     &__checkbox:checked ~ &__next__page {
@@ -137,9 +180,9 @@
     &__checkbox:checked ~ &__next__page &__next__page__back {
         opacity: 1;
         width: 100%;
-        bottom: 15%;
-        left: 0;
-        
+        bottom: 10%;
+        text-align: center;
+        display: inline-block;
     }
 
     // Recipe on click
