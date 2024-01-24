@@ -1,14 +1,18 @@
 .experience {
   width: 75%;
   margin: 0 auto;
-  box-shadow: 0 1.5rem 2.5rem rgba($color-black, 0.6);
-  background-color: rgba($color-grey-soft, .6);
+  box-shadow: 0 1.5rem 2.5rem rgba($color-black, 0.9);
+  background-color: rgba($color-grey-soft, .9);
   border-radius: 3px;
   padding: 5rem;
   padding-left: 6rem;
   font-size: $default-font-size-medium;
   min-height: 25rem;
   transform: skewX(-12deg);
+  
+  &__background{
+    background-color: $color-grey-soft
+  }
 
   &__shape {
     width: 15rem;

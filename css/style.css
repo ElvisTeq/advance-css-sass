@@ -349,14 +349,16 @@ body {
 .experience {
   width: 75%;
   margin: 0 auto;
-  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.6);
-  background-color: rgba(32, 32, 32, 0.6);
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.9);
+  background-color: rgba(32, 32, 32, 0.9);
   border-radius: 3px;
   padding: 5rem;
   padding-left: 6rem;
   font-size: 1.8rem;
   min-height: 25rem;
   transform: skewX(-12deg); }
+  .experience__background {
+    background-color: #202020; }
   .experience__shape {
     width: 15rem;
     height: 15rem;
@@ -773,7 +775,6 @@ body {
   /* View port of the header, controll how much to show on the screen */
   height: 95vh;
   /* Adding 2 images, linear-gradient on top of the actual image for additional effect */
-  background-image: linear-gradient(to right bottom, rgba(255, 182, 46, 0.7), rgba(114, 71, 5, 0.7)), url(../img/header.jpg);
   /* cover = to fit inside the elements view port */
   background-size: cover;
   background-position: top;
@@ -850,19 +851,32 @@ body {
   margin-top: -12rem; }
 
 .section-experience {
-  position: relative;
-  padding: 15rem; }
+  background-color: #202020;
+  padding: 25rem 0 15rem 0;
+  margin-top: -12rem; }
 
 .section-subscribe {
   padding: 15rem;
-  background-image: linear-gradient(to right top, rgba(114, 71, 5, 0.1), rgba(255, 182, 46, 0.4)); }
+  background-size: cover;
+  background-position: top;
+  /* position on child elements will be based on here */
+  background-image: linear-gradient(to right bottom, rgba(114, 71, 5, 0.5), rgba(114, 71, 5, 0.5)), url(../img/header.jpg); }
 
 .sub {
-  background-image: linear-gradient(105deg, rgba(32, 32, 32, 0.8) 0%, rgba(32, 32, 32, 0.8) 50%, transparent 50%), url(../../img/bacon&eggs.png);
+  background-image: linear-gradient(120deg, rgba(32, 32, 32, 0.8) 0%, rgba(32, 32, 32, 0.8) 35%, transparent 100%);
   background-size: cover;
   border-radius: 2px;
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
   height: 50rem; }
   .sub__form {
     width: 50%;
     padding: 6rem; }
+
+.section-separator {
+  padding: 25rem 0;
+  margin-top: -6rem;
+  background-image: linear-gradient(to right bottom, rgba(255, 182, 46, 0.5), rgba(114, 71, 5, 0.5)), url(../img/mcdonalds.png);
+  background-size: cover;
+  transform: skewY(-7deg); }
+  .section-separator > * {
+    transform: skewY(7deg); }

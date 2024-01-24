@@ -2,12 +2,12 @@
   /* View port of the header, controll how much to show on the screen */
   height: 95vh;
   /* Adding 2 images, linear-gradient on top of the actual image for additional effect */
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.7),
-      rgba($color-primary-dark, 0.7)
-    ),
-    url(../img/header.jpg);
+  // background-image: linear-gradient(
+  //     to right bottom,
+  //     rgba($color-primary-light, 0.7),
+  //     rgba($color-primary-dark, 0.7)
+  //   ),
+  //   url(../img/header.jpg);
   /* cover = to fit inside the elements view port */
   background-size: cover;
   background-position: top;
