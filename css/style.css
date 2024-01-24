@@ -569,7 +569,8 @@ body {
     font-size: 1.8rem;
     border-bottom: 1px solid #ffb62e;
     opacity: 0;
-    font-weight: 800; }
+    font-weight: 800;
+    bottom: 0; }
   .popup__direction-text {
     font-size: 1.8rem;
     font-weight: 900;
