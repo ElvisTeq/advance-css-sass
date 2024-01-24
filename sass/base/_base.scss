@@ -10,12 +10,24 @@
 
 html {
   /* Defining "1rem" so it escalates with all platforms default root px */
-  /* We want 10px, so, 16/62.5 = 10 */
+  /* 1 rem = 16 px */
+  /* We want it to be 10px, so, 16/62.5 = 10 */
+  /* rem also defines font-size */
   font-size: 62.5%;
 
-  @include responsive-phone {
+  // Order media queries from large to small
+  @include responsive(big-desktop) {
+    font-size: 75%;
+  }
+
+  @include responsive(tab-landscape) {
+    font-size: 56.25%;
+  }
+
+  @include responsive(tablet) {
     font-size: 50%;
   }
+  
 }
 
 body {

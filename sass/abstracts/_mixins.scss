@@ -15,6 +15,27 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin responsive-phone {
-  @media (max-width: 600px) { @content };
+// @mixin responsive-phone {
+//   @media (max-width: 600px) { @content };
+// }
+
+// use em for media query
+// em = 16px
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    // 600px
+    @media (max-width: 37.5em) { @content };
+  }
+    // 900px
+  @if $breakpoint == tablet {
+    @media (max-width: 56.25em) { @content };
+  }
+    // 1200px
+  @if $breakpoint == tab-landscape {
+    @media (max-width: 75em) { @content };
+  }
+    // 1800px
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) { @content };
+  }
 }
