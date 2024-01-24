@@ -198,7 +198,7 @@
 
 ------------------------------------ class__input:placeholder-shown + class __label
 
-- CSS to chanse something before requirement mets 
+- CSS to change something before requirement mets 
 - if placeholder in __input, then remove __label
 
 47.
@@ -212,3 +212,12 @@
 ------------------------------------ display: table cell
 - child
 ------------------------------------ vertical-align: middle
+
+53.
+
+------------------------------------ id="section-whatever"
+------------------------------------ href="#section-whatever"
+------------------------------------ &:target {}
+
+- Using css pseudo class to target a href to display
+- use ID to target href
