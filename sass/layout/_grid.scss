@@ -5,6 +5,16 @@
   // Everything but the last child
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include responsive(tablet) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include responsive (tablet) {
+    max-width: 50rem;
+    padding: 3rem;
+    
   }
 
   // Fixes heigh spacing
@@ -17,6 +27,16 @@
     // No marging for last child
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include responsive(tablet) {
+        // removing margin
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include responsive(tablet) {
+      width: 100% !important;
     }
   }
 
