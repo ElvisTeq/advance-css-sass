@@ -12,6 +12,10 @@ html {
   /* Defining "1rem" so it escalates with all platforms default root px */
   /* We want 10px, so, 16/62.5 = 10 */
   font-size: 62.5%;
+
+  @include responsive-phone {
+    font-size: 50%;
+  }
 }
 
 body {

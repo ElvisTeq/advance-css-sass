@@ -14,3 +14,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin responsive-phone {
+  @media (max-width: 600px) { @content };
+}
