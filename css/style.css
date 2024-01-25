@@ -975,7 +975,7 @@ body {
   background-size: cover;
   background-position: top;
   /* position on child elements will be based on here */
-  background-image: linear-gradient(to right bottom, rgba(114, 71, 5, 0.5), rgba(114, 71, 5, 0.5)), url(../img/header.jpg); }
+  background-image: linear-gradient(to right bottom, rgba(255, 182, 46, 0.5), rgba(114, 71, 5, 0.5)), url(../img/header.jpg); }
   @media (max-width: 56.25em) {
     .section-subscribe {
       padding: 10rem; } }
