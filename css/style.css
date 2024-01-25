@@ -975,7 +975,7 @@ body {
     transform: skewY(7deg); }
   @media (max-width: 56.25em) {
     .section-features {
-      padding: 10rem 0; } }
+      padding: 10rem 0 6rem 0; } }
 
 .section-dishes {
   background-color: #202020;
