@@ -27,6 +27,17 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
 
+    display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary
+  );
+  // Convert background color to the text only
+  -webkit-background-clip: text;
+  // Make text transparent to see background color
+  color: transparent;
+
     @include responsive(phone) {
       letter-spacing: 1rem;
       font-size: 5rem;
@@ -41,6 +52,17 @@ body {
 
     /* Can be shortened all in one */
     animation: moveInRight 1s ease-out;
+
+    display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary
+  );
+  // Convert background color to the text only
+  -webkit-background-clip: text;
+  // Make text transparent to see background color
+  color: transparent;
 
     @include responsive(phone) {
       letter-spacing: .5rem;
