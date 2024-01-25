@@ -1,5 +1,5 @@
 .feature-box {
-  // min-height: 31rem;
+  min-height: 31rem;
   background-color: rgba($color-grey-soft, 0.9);
   font-size: $default-font-size-small;
   padding: 2.5rem;
@@ -10,6 +10,7 @@
 
   @include responsive(tablet) {
     padding: 2rem;
+    min-height: 15rem;
   }
 
   &__icon {

@@ -27,4 +27,8 @@
 }
 .u-margin-top-huge {
   margin-top: 10rem !important;
+
+  @include responsive(tablet) {
+    margin-top: 0 !important;
+  }
 }

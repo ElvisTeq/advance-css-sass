@@ -34,8 +34,8 @@
   @if $breakpoint == tab-landscape {
     @media (max-width: 75em) { @content };
   }
-    // 1800px
+    // 2000px
   @if $breakpoint == big-desktop {
-    @media (min-width: 112.5em) { @content };
+    @media (min-width: 125em) { @content };
   }
 }
