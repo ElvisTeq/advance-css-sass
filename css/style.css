@@ -426,6 +426,9 @@ body {
       display: block;
       text-align: center;
       width: 100%; }
+      @media (max-width: 37.5em) {
+        .card__ingredients-btn {
+          transform: translateY(3.5rem); } }
 
 .experience {
   width: 75%;
