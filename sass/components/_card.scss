@@ -53,6 +53,14 @@
     &--2 {
       background-image: url(../../img/onigiri-2.jpg);
     }
+
+    @include responsive(tablet) {
+      height: 23rem;
+    }
+
+    @include responsive(phone) {
+      height: 18rem;
+    }
   }
 
   &__heading {
@@ -64,6 +72,14 @@
     top: 23rem;
     left: 2rem;
     width: 50%;
+
+    @include responsive(tablet) {
+      top: 18rem;
+    }
+
+    @include responsive(phone) {
+      top: 10rem;
+    }
   }
 
   &__heading-span {
@@ -92,7 +108,12 @@
     text-decoration-color: $color-primary;
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.5rem;
+
+    @include responsive(phone) {
+      transform: translate(2.5rem, 2rem) scale(.8);
+    }
   }
+
   &--difficulty {
   }
 
@@ -111,6 +132,12 @@
     text-align: end;
     width: 98%;
     color: $color-primary-light;
+
+    @include responsive(tablet) {
+      text-align: center;
+      bottom: 1rem;
+      background-color: $color-grey-soft;
+    }
   }
 
   ///////////////////////////// Card Back Side ////////////////////////////
@@ -129,6 +156,10 @@
 
     &--2 {
       background-image: url(../../img/onigiri-real.jpg);
+    }
+
+    @include responsive(tablet) {
+      height: 23rem;
     }
   }
 

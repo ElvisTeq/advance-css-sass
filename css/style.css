@@ -335,6 +335,12 @@ body {
       background-image: url(../img/ramen.png); }
     .card__picture-front--2 {
       background-image: url(../../img/onigiri-2.jpg); }
+    @media (max-width: 56.25em) {
+      .card__picture-front {
+        height: 23rem; } }
+    @media (max-width: 37.5em) {
+      .card__picture-front {
+        height: 18rem; } }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 500;
@@ -344,6 +350,12 @@ body {
     top: 23rem;
     left: 2rem;
     width: 50%; }
+    @media (max-width: 56.25em) {
+      .card__heading {
+        top: 18rem; } }
+    @media (max-width: 37.5em) {
+      .card__heading {
+        top: 10rem; } }
   .card__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
@@ -361,6 +373,9 @@ body {
     text-decoration-color: #ffcb6a;
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.5rem; }
+    @media (max-width: 37.5em) {
+      .card__stats {
+        transform: translate(2.5rem, 2rem) scale(0.8); } }
   .card__details {
     padding: 2rem;
     font-size: 1.8rem;
@@ -374,6 +389,11 @@ body {
     text-align: end;
     width: 98%;
     color: #ffb62e; }
+    @media (max-width: 56.25em) {
+      .card__more {
+        text-align: center;
+        bottom: 1rem;
+        background-color: #202020; } }
   .card__cta {
     position: absolute;
     width: 100%; }
@@ -384,6 +404,9 @@ body {
       background-image: url(../../img/real-ramen.jpg); }
     .card__picture-back--2 {
       background-image: url(../../img/onigiri-real.jpg); }
+    @media (max-width: 56.25em) {
+      .card__picture-back {
+        height: 23rem; } }
   .card__ingredients {
     margin: 3rem 0 0 2.5rem;
     font-size: 1.8rem; }
