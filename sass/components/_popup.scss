@@ -27,11 +27,29 @@
         // only 1 transform allowed => so we combine them into 1
         transform: translate(-50%, -50%) scale(0);
         transition: all .5s .2s;
+
+        @include responsive(tab-landscape) {
+            display: block;
+        }
+
+        @include responsive(phone) {
+            width: 90%;
+        }
     }
 
     &__left {
         width: 33.33%;
         display: table-cell;
+
+        @include responsive(tab-landscape) {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        @include responsive(phone) {
+            width: 0%;
+        }
     }
 
     &__right {
@@ -39,11 +57,31 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include responsive(tablet) {
+            display: block;
+            width: 100%;
+        }
+
+        @include responsive(phone) {
+            width: 100%;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include responsive(tab-landscape) {
+            width: 49%;
+            padding: .3rem;
+            max-height: 20rem;
+            display: inline-block;
+        }
+
+        @include responsive(phone) {
+            display: none;   
+        }
     }
 
     &__text {
@@ -70,6 +108,16 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include responsive(phone) {
+            list-style: disc;
+
+            column-rule: 0;
+            column-gap: 4rem;
+
+            -moz-column-rule: 0;
+            -moz-column-gap: 4rem;
+        }
     }
 
     &__item{
@@ -78,6 +126,10 @@
         margin-top: .2rem;
         position: relative;
         color: $color-white;
+
+        @include responsive(phone) {
+            
+        }
     }
 
     &__button {
@@ -115,16 +167,27 @@
         width: 0%;
         right: 0;
         transition: all 0.4s;
+        // position: absolute;
         }
     
         // popup back page button
     &__next__page__back {
-        position: absolute;
+        position: relative;
         font-size: $default-font-size-medium;
         border-bottom: 1px solid $color-primary-light;
         opacity: 0;
         font-weight: 800;
         bottom: 0;
+        top: 2rem;
+
+        @include responsive(tab-landscape) {
+            top: 5%;
+        }
+
+        @include responsive(tablet) {
+            margin: .5rem;
+            top: 0%;
+        }
     }
 
     &__direction-text {
@@ -133,6 +196,14 @@
         color: $color-primary-light;
         margin-left: 3rem;
         margin-top: 3rem;
+
+        @include responsive(tab-landscape) {
+            margin-top: 6rem;
+        }
+
+        @include responsive(tablet) {
+            margin-top: 3rem;
+        }
     }
 
     &__direction-list {
@@ -157,6 +228,12 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include responsive(phone) {
+            -moz-column-count: 1;
+            column-count: 1;
+
+        }
 
     }
 
