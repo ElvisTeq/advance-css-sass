@@ -2,6 +2,10 @@
 
   &__title {
    margin-top: -5%;
+
+   @include responsive(phone) {
+    transform: translateY(-10%);
+   }
   }
 
     &__group:not(:last-child) {

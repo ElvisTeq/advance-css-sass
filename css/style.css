@@ -496,6 +496,9 @@ body {
 
 .form__title {
   margin-top: -5%; }
+  @media (max-width: 37.5em) {
+    .form__title {
+      transform: translateY(-10%); } }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
@@ -704,7 +707,8 @@ body {
     opacity: 0;
     width: 0%;
     right: 0;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    overflow-y: auto; }
   .popup__next__page__back {
     position: relative;
     font-size: 1.8rem;
