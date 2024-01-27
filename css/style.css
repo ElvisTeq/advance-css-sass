@@ -441,6 +441,14 @@ body {
   font-size: 1.8rem;
   min-height: 25rem;
   transform: skewX(-12deg); }
+  @media (max-width: 56.25em) {
+    .experience {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media (max-width: 37.5em) {
+    .experience {
+      transform: skewX(0); } }
   .experience__background {
     background-color: #202020; }
   .experience__shape {
@@ -453,6 +461,9 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-2rem) skewX(12deg);
     position: relative; }
+    @media (max-width: 37.5em) {
+      .experience__shape {
+        transform: translateX(-3rem) skewX(0); } }
   .experience__img {
     height: 100%;
     transform: translateX() scale(1);
@@ -461,6 +472,9 @@ body {
   .experience__text {
     font-size: 1.8rem;
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .experience__text {
+        transform: skewX(0); } }
   .experience__caption {
     position: absolute;
     top: 50%;
