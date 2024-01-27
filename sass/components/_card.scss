@@ -176,7 +176,7 @@
       text-align: center;
       width: 100%;
 
-      @include responsive(phone) {
+      @include responsive(phone) { 
         transform: translateY(3.5rem);
       }
     }
