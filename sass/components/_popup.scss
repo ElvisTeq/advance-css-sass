@@ -155,7 +155,7 @@
         }
 
     
-        // popup next page
+        /////////////////////////// popup next page ///////////////////////////
     &__next__page {
         height: 100%;
         width: 0%;
@@ -166,7 +166,7 @@
         opacity: 0;
         width: 0%;
         right: 0;
-        transition: all 0.4s;
+        // transition: all 0.4s cubic-bezier(.56,.55,.84,.19); 
         overflow-y: auto;
         // position: absolute;
         }
