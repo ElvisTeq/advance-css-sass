@@ -13,6 +13,8 @@
     top: 0;
     left: 0;
     width: 100%;
+    // for old safari browsers to work
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     // Hide oversized elements (images border radius)

@@ -1,6 +1,6 @@
 .header {
   /* View port of the header, controll how much to show on the screen */
-  height: 95vh;
+  height: 85vh;
   /* Adding 2 images, linear-gradient on top of the actual image for additional effect */
 
   // background-image: linear-gradient(
@@ -15,10 +15,15 @@
   background-position: top;
   /* position on child elements will be based on here */
   position: relative;
+
+  // Runs only if is supported (overrides changes)
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
   /* Crop header */
   // -webkit- for all webs to work
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* (x y) */
+  height: 95vh;
+  }
 
   @include responsive(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);

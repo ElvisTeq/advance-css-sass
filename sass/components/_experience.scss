@@ -28,15 +28,22 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    // Has to be floated + height/width to work
-    // circle(radius at center position)
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     // Only 1 transform can work at the same time
     transform: translateX(-2rem) skewX(12deg);
     position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    // this run only if clip-path is supported in the browser
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        // Has to be floated + height/width to work
+        // circle(radius at center position)
+       -webkit-shape-outside: circle(50% at 50% 50%);
+       shape-outside: circle(50% at 50% 50%);
+       -webkit-clip-path: circle(50% at 50% 50%);
+       clip-path: circle(50% at 50% 50%);
+       border-radius: none;
+    }
 
     @include responsive(phone) {
       transform: translateX(-3rem) skewX(0);
