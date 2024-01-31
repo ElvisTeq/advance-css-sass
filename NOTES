@@ -221,3 +221,20 @@
 
 - Using css pseudo class to target a href to display
 - use ID to target href
+
+------------------------------------------ npm i -----------------------------------------------
+65.
+
+-- merge all css files
+- npm i concat --save-dev
+
+-- to automatically add -webkit to our css
+- npm i autoprefixer --save-dev
+- npm i postcss-cli --save-dev
+- npm i postcss --save-dev
+-- added for postcss to work
+- "browserslist": "last 10 versions", 
+
+-- to run all script at once
+- npm i npm-run-all --save-dev
+- --parallel (to make scripts run at the same time)
