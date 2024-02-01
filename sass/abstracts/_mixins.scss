@@ -24,18 +24,18 @@
 @mixin responsive($breakpoint) {
   @if $breakpoint == phone {
     // 600px
-    @media (max-width: 37.5em) { @content };
+    @media only screen and (max-width: 37.5em) { @content };
   }
     // 900px
   @if $breakpoint == tablet {
-    @media (max-width: 56.25em) { @content };
+    @media only screen and (max-width: 56.25em) { @content };
   }
     // 1200px
   @if $breakpoint == tab-landscape {
-    @media (max-width: 75em) { @content };
+    @media only screen  and (max-width: 75em) { @content };
   }
     // 2000px
   @if $breakpoint == big-desktop {
-    @media (min-width: 125em) { @content };
+    @media only screen and (min-width: 125em) { @content };
   }
 }
